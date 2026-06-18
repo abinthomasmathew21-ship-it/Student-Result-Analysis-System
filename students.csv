@@ -1,4 +1,6 @@
-StudentID,Name,Python,SQL,Maths,DS,Statistics
-101,Abin Thomas,90,88,75,82,91
-102,Alan Roy,78,85,80,76,88
-103,Rahul,95,92,89,94,90
+StudentID,Name,Department,Semester,Python,SQL,Maths,DS,Statistics
+101,Abin Thomas,CSE,S3,90,88,75,82,91
+102,Alan Roy,CSE,S3,78,85,80,76,88
+103,Rahul,CSE,S3,95,92,89,94,90
+104,Anand,CSE,S3,70,75,68,72,80
+105,Priya,CSE,S3,85,87,92,84,89
