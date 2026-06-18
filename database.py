@@ -1,22 +1,20 @@
 import sqlite3
+import pandas as pd
 
+# Connect to database
 conn = sqlite3.connect("result.db")
 
-cursor = conn.cursor()
+# Read CSV file
+df = pd.read_csv("students.csv")
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS students(
-    StudentID INTEGER,
-    Name TEXT,
-    Python INTEGER,
-    SQL INTEGER,
-    Maths INTEGER,
-    DS INTEGER,
-    Statistics INTEGER
+# Store data into SQL table
+df.to_sql(
+    "students",
+    conn,
+    if_exists="replace",
+    index=False
 )
-""")
 
-print("Database and table created successfully!")
+print("CSV data imported into SQL database successfully!")
 
-conn.commit()
 conn.close()
